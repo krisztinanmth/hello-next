@@ -1,5 +1,6 @@
 import React from 'react';
 import { readFile, writeFile } from '../helpers/fileHelpers';
+import Censored from '../components/Censored/Censored';
 
 const DATABASE_PATH = '/src/database.json';
 
@@ -29,7 +30,10 @@ function Home() {
   return (
     <main>
       <h1>Hello Next!</h1>
-      <p>You are visitor number: {hits}</p>
+      <p>
+        You are visitor number:
+        <Censored>{hits}</Censored>
+      </p>
     </main>
   );
 }
